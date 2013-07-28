@@ -1,11 +1,11 @@
 SampleApp::Application.routes.draw do
-  get "users/new"
 
-  get "users/edit"
+  root :to => 'users#index'
 
-  get "users/show"
+  match '/new'  => 'users#new'
+  match '/edit' => 'users#edit'
+  match '/show' => 'users#show'
 
-  get "users/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
