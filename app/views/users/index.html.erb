@@ -1,2 +1,19 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<h1>Users</h1>
+<p>A listing of all the users</p>
+
+<table class="table table-bordered table-stripped table-hover">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Created at</th>
+        <th>Updated at</th>
+    </tr>
+    <% @users.each do |usr| %>
+    <tr>
+        <td><%= usr.name       %></td>
+        <td><%= usr.email      %></td>
+        <td><%= usr.created_at %></td>
+        <td><%= usr.updated_at %></td>
+    </tr>
+    <% end %>
+</table>
