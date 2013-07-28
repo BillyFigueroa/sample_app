@@ -1,0 +1,22 @@
+<%= form_for @user, :html => { class: 'form-horizontal' } do |f| %>
+    <div class="control-group">
+        <%= f.label :name, class: 'control-label' %>
+        <div class="controls">
+            <%= f.text_field :name %>
+        </div>
+    </div>
+    <div class="control-group">
+        <%= f.label :email, class: 'control-label' %>
+        <div class="controls">
+            <%= f.text_field :email %>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <label class="checkbox">
+                <input type="checkbox"> Remember me
+            </label>
+            <%= f.submit class: 'btn btn-primary btn-large' %>
+        </div>
+    </div>
+<% end %>
